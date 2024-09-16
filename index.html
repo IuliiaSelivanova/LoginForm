@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
+  <title>Loginan Register Form</title>
 
   <!-- Font Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
 </head>
 <body translate="no">
   <div class="center">
+    <!-- Starter screen -->
     <div id="layout" class="starter">
       <figure>
         <img src="/src/images/IllustrationPicture.png" alt="Illustration Picture">
@@ -24,17 +25,18 @@
         <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
       </header>
       <div class="button-container">
-        <button id="btn-creation" class="btn btn-creation">Create Account</button>
-        <button id="btn-login" class="btn btn-to-login">Login</button>
+        <button id="btn-creation" class="btn btn-creation to-register">Create Account</button>
+        <button id="btn-login" class="btn btn-to-login to-login">Login</button>
       </div>
       
       <footer class="rights">All Right Reserved @&nbsp;2021</footer>
     </div>
  
-    <form action="post" class="login">
-      <header class="header-login">
-        <div class="subtitle subtitle-login">Welcome Back!!!</div>
-        <h1 class="title title-login">Login</h1>
+    <!-- Login Form -->
+    <form action="post" class="form" id="login">
+      <header class="form__header">
+        <div class="subtitle form__subtitle">Welcome Back!!!</div>
+        <h1 class="title form__title">Login</h1>
 
         <button class="btn-close">
           <img src="/src/images/icons/close.png" alt="Close button">
@@ -43,14 +45,14 @@
 
       <main>
         <div class="username-container">
-          <input type="text" name="username" placeholder=" " id="username-input" required>
-          <label class="username-label" for="username-input">username</label>
+          <input type="text" name="username" placeholder=" " id="username-input-login" required>
+          <label class="username-label" for="username-input-login">username</label>
           <span class="error name-error"></span>
         </div>
 
         <div class="password-container">
-          <input type="password" name="password" placeholder=" " id="password-input" required>
-          <label class="password-label" for="password-input">password</label>
+          <input type="password" name="password-login" placeholder=" " id="password-input" required>
+          <label class="password-label-login" for="password-input">password</label>
           <span class="error password-error"></span>
         </div>
 
@@ -63,11 +65,55 @@
           <a href="/">Forget Password?</a>
         </div>
 
-        <div class="button-container button-container-login">
-          <button class="btn btn-login">Login</button>
+        <div class="button-container button-container-form">
+          <button class="btn btn-form">Login</button>
         </div>
 
-        <div class="link-to-register">Don’t have an account? <a href="/">Register</a></div>
+        <div class="link-to-register">Don’t have an account? <button class="to-register">Register</button></div>
+      </main>
+    </form>
+
+    <!-- Register Form -->
+    <form action="post" class="form" id="register">
+      <header class="form__header">
+        <div class="subtitle form__subtitle">Hello...</div>
+        <h1 class="title form__title">Register</h1>
+
+        <button class="btn-close">
+          <img src="/src/images/icons/close.png" alt="Close button">
+        </button>
+      </header>
+
+      <main>
+        <div class="input-container">
+          <input type="text" name="username" placeholder=" " id="username-input-register" required>
+          <label class="username-label" for="username-input-register">username</label>
+          <span class="error name-error"></span>
+        </div>
+
+        <div class="input-container">
+          <input type="text" name="course" placeholder=" " id="course-input" required>
+          <label class="course-label" for="course-input">course</label>
+          <span class="error course-error"></span>
+        </div>
+
+        <div class="input-container">
+          <input type="password" name="password-register" placeholder=" " id="password-input-register" required>
+          <label class="password-label-register" for="password-input">password</label>
+          <span class="error password-error"></span>
+        </div>
+
+        <div class="input-container">
+          <input type="password" name="password-confirm" placeholder=" " id="password-confirm-input" required>
+          <label class="password-confirm-label" for="password-confirm-input">confirm password</label>
+          <span class="error password-confirm-error"></span>
+        </div>
+
+        <div class="button-container button-container-form">
+          <button class="btn btn-form">Register</button>
+        </div>
+
+        <div class="link-to-login">Already have account? <button class="to-login">Login</button></div>
       </main>
     </form>
 

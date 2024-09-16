@@ -1,28 +1,54 @@
 // Переменные
 
-const createAccountBtn = document.getElementById('btn-creation'),
-      toLoginBtn = document.getElementById('btn-login'),
-      closeBtn = document.querySelector('.btn-close'),
-      loginForm = document.querySelector('.login'),
-      layout = document.getElementById('layout')
+const createAccountBtns = document.querySelectorAll('.to-register'),
+      toLoginBtns = document.querySelectorAll('.to-login'),
+      closeBtns = document.querySelectorAll('.btn-close'),
+      loginForm = document.querySelector('#login'),
+      layout = document.getElementById('layout'),
+      registerForm = document.querySelector('#register'),
+      toLogin = document.getElementById('to-login')
 
-toLoginBtn.addEventListener('click', showLoginForm);
+// Переход к формам со стартового экрана
+createAccountBtns.forEach((button) => {
+  button.addEventListener('click', showRegisterForm);
+})
 
-function showLoginForm() {
-  loginForm.style.bottom = '0px';
+toLoginBtns.forEach((button) => {
+  button.addEventListener('click', showLoginForm);
+})
+
+// Закрытие форм
+closeBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', closeForms);
+})
+
+function showRegisterForm(){
+  loginForm.style.bottom = '-1000px';
+  registerForm.style.bottom = '0px';
   setTimeout(() => {
     layout.classList.add('layout');
   }, 300);
 }
 
-closeBtn.addEventListener('click', closeForms);
+function showLoginForm() {
+  registerForm.style.bottom = '-1000px';
+  setTimeout(() => {
+    loginForm.style.bottom = '0px';
+  }, 300);
+  setTimeout(() => {
+    layout.classList.add('layout');
+  }, 300);
+}
 
 function closeForms(){
   loginForm.style.bottom = '-1000px';
+  registerForm.style.bottom = '-1000px';
   setTimeout(() => {
     layout.classList.remove('layout');
   }, 300);
 }
+
+
 
 
 

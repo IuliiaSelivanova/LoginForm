@@ -33,7 +33,7 @@
 body {
   background: linear-gradient(120deg, #2980b9, #8e44ad);
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: var(--ff-segoe-ui);
   font-weight: var(--fw-400);
   font-size: 20px;
@@ -121,7 +121,7 @@ button, a {
 
 /* Login Form */
 
-.login{
+.form{
   background: var(--clr-bg-form);
   width: 100%;
   border-radius: var(--border-radius-container);
@@ -134,20 +134,20 @@ button, a {
   transition: bottom .7s ease-in-out;
 }
 
-.header-login {
+.form__header {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
   width: 100%;
   margin-bottom: 25px;
 }
-.subtitle-login {
+.form__subtitle {
   text-align: start;
   color: var(--clr-bg );
   font-weight: var(--fw-400);
   grid-area: 1 / 1 / 2 / 2;
 }
-.title-login {
+.form__title {
   color: var(--clr-bg);
   font-family: var(--ff-segoe-ui);
   font-weight: var(--fw-700);
@@ -175,7 +175,8 @@ input{
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }
-input[name='username'] {
+
+input[name='username'], input[name="course"] {
   background-image: url('/src/images/icons/eye.svg');
 
   &:focus{
@@ -187,12 +188,26 @@ input[name='username'] {
     &+label {
       font-size: 15px;
       opacity: 100%;
-      top: 123px;
       z-index: 20;
     }
   }
 }
-input[name='password'] {
+input[name='username']{
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    &+label {
+      top: 123px;
+    }
+  }
+}
+input[name="course"], input[name='password-login']{
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    &+label {
+      top: 200px;
+    }
+  }
+}
+
+input[name='password-login'], input[name='password-register'], input[name="password-confirm"] {
   background-image: url('/src/images/icons/lock.svg');
   margin-bottom: 10px;
 
@@ -205,13 +220,29 @@ input[name='password'] {
     &+label {
       font-size: 15px;
       opacity: 100%;
-      top: 203px;
       z-index: 20;
     }
   }
 }
 
-.username-label, .password-label {
+input[name='password-register']{
+  margin-bottom: 20px;
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    &+label {
+      top: 283px;
+    }
+  }
+}
+input[name='password-confirm']{
+  margin-bottom: 20px;
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    &+label {
+      top: 360px;
+    }
+  }
+}
+
+label:not([class='checkbox-label']) {
   position: absolute;
   color: #000;
   opacity: 50%;
@@ -221,14 +252,20 @@ input[name='password'] {
   transition: 0.3s;
   background-color: var(--clr-bg-form);
   padding-inline: 10px;
+  left: 45px;
 }
+
 .username-label{
   top: 150px;
-  left: 45px;
 }
-.password-label{
+.password-label-login, .course-label{
   top: 230px;
-  left: 45px;
+}
+.password-label-register{
+  top: 310px;
+}
+.password-confirm-label{
+  top: 387px;
 }
 
 /* Custom checkbox */
@@ -287,25 +324,28 @@ input[name='password'] {
   color: var(--clr-title);
 }
 
-.button-container-login {
+.button-container-form {
   width: 100%;
   margin-bottom: 10px;
 }
-.btn-login {
+.btn-form {
   border-color: var(--clr-bg);
   background: var(--clr-bg);
   color: var(--clr-accent);
   transition: transform .3s ease;
 }
-.btn-login:hover{
+.btn-form:hover{
   transform: scale(1.05);
 }
 
-.link-to-register {
+
+.link-to-register, .link-to-login {
   font-size: 18px;
   text-align: center;
 }
-.link-to-register > a {
+.link-to-register > button, .link-to-login> button {
+  background: none;
+  border: none;
   font-weight: var(--fw-600);
   color: var(--clr-title);
 }
