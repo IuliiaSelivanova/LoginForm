@@ -295,7 +295,12 @@ input[name='password'] {
   border-color: var(--clr-bg);
   background: var(--clr-bg);
   color: var(--clr-accent);
+  transition: transform .3s ease;
 }
+.btn-login:hover{
+  transform: scale(1.05);
+}
+
 .link-to-register {
   font-size: 18px;
   text-align: center;
