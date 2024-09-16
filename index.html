@@ -11,48 +11,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/index.css">
-  <!-- <script src="index.js" defer></script> -->
+  <script src="/src/index.js" defer></script>
 </head>
 <body translate="no">
   <div class="center">
-    <figure>
-      <img src="/src/images/IllustrationPicture.png" alt="Illustration Picture">
-    </figure>
-    
-    <header>
-      <h1 class="title">Welcome</h1>
-      <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
-    </header>
-
-    <div class="button-container">
-      <button class="btn btn-creation">Create Account</button>
-      <button class="btn btn-login">Login</button>
+    <div id="layout" class="starter">
+      <figure>
+        <img src="/src/images/IllustrationPicture.png" alt="Illustration Picture">
+      </figure>
+      <header>
+        <h1 class="title">Welcome</h1>
+        <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+      </header>
+      <div class="button-container">
+        <button id="btn-creation" class="btn btn-creation">Create Account</button>
+        <button id="btn-login" class="btn btn-to-login">Login</button>
+      </div>
+      
+      <footer class="rights">All Right Reserved @&nbsp;2021</footer>
     </div>
-    
-    <footer class="rights">All Right Reserved @&nbsp;2021</footer>
  
+    <form action="post" class="login">
+      <header class="header-login">
+        <div class="subtitle subtitle-login">Welcome Back!!!</div>
+        <h1 class="title title-login">Login</h1>
+
+        <button class="btn-close">
+          <img src="/src/images/icons/close.png" alt="Close button">
+        </button>
+      </header>
+
+      <main>
+        <div class="username-container">
+          <input type="text" name="username" placeholder=" " id="username-input" required>
+          <label class="username-label" for="username-input">username</label>
+          <span class="error name-error"></span>
+        </div>
+
+        <div class="password-container">
+          <input type="password" name="password" placeholder=" " id="password-input" required>
+          <label class="password-label" for="password-input">password</label>
+          <span class="error password-error"></span>
+        </div>
+
+        <div class="pass">
+          <div class="checkbox-container">
+            <input class="checkbox-input" type="checkbox" id="checkbox" name="checkbox">
+            <label class="checkbox-label" for="checkbox">Remember me</label>
+          </div>
+
+          <a href="/">Forget Password?</a>
+        </div>
+
+        <div class="button-container button-container-login">
+          <button class="btn btn-login">Login</button>
+        </div>
+
+        <div class="link-to-register">Don’t have an account? <a href="/">Register</a></div>
+      </main>
+    </form>
 
 
-
-
-    <!-- <h1> Login</h1>
-    <form method="post">
-      <div class="txt_field">
-        <input type="text" required>
-        <label>Username</label>
-        <span></span>
-      </div>
-      <div class="txt_field">
-        <input type="password" required>
-        <label>Password</label>
-        <span></span>
-      </div>
-  
-      <div class="pass">Forgot Password?</div>
-      <input type="submit" value="Login">
-      <div class="signup_link">Not a member? <a href="">Signup</a>
-      </div>
-    </form> -->
   </div>
 </body>
 </html>
