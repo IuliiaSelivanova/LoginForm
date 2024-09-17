@@ -191,10 +191,10 @@ input{
 }
 
 input[name='username'], input[name="course"] {
-  background-image: url('./src/images/icons/eye.svg');
+  background-image: url('./images/icons/eye.svg');
 
   &:focus{
-    background-image: url('./src/images/icons/eye-focus.svg');
+    background-image: url('./images/icons/eye-focus.svg');
     border-width: 2px;
   }
 
@@ -222,11 +222,11 @@ input[name="course"], input[name='password-login']{
 }
 
 input[name='password-login'], input[name='password-register'], input[name="password-confirm"] {
-  background-image: url('./src/images/icons/lock.svg');
+  background-image: url('./images/icons/lock.svg');
   margin-bottom: 10px;
 
   &:focus{
-    background-image: url('./src/images/icons/lock-focus.svg');
+    background-image: url('./images/icons/lock-focus.svg');
     border-width: 2px;
   }
 
