@@ -318,7 +318,7 @@ label:not([class='checkbox-label']) {
   flex-grow: 0;
 }
 .checkbox-input:checked + .checkbox-label::before {
-  background-image: url('./src/images/icons/checkbox.svg');
+  background-image: url('./images/icons/checkbox.svg');
   background-size: contain;
 }
 .checkbox-input:hover + .checkbox-label::before{
