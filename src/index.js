@@ -1,5 +1,4 @@
 // Переменные
-
 const createAccountBtns = document.querySelectorAll('.to-register'),
       toLoginBtns = document.querySelectorAll('.to-login'),
       closeBtns = document.querySelectorAll('.btn-close'),

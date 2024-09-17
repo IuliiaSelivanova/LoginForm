@@ -31,12 +31,26 @@
 }
 
 body {
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  background: linear-gradient(to right,#1abc9c,#16a085,#2ecc71,#27ae60,#3498db,#2980b9,#9b59b6,#8e44ad,#f1c40f,#f39c12,#e67e22,#d35400);
+  background-size: 400%;
+  animation: bganimation 20s infinite;
   height: 100vh;
   overflow: hidden;
   font-family: var(--ff-segoe-ui);
   font-weight: var(--fw-400);
   font-size: 20px;
+}
+
+@keyframes bganimation{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
 }
 
 .center {
