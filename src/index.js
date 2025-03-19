@@ -42,8 +42,7 @@ closeBtns.forEach((closeBtn) => {
   closeBtn.addEventListener("click", closeForms);
 });
 
-function closeForms(e) {
-  // e.preventDefault();
+function closeForms() {
   loginForm.style.bottom = "-1000px";
   registerForm.style.bottom = "-1000px";
   setTimeout(() => {
