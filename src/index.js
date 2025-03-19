@@ -43,7 +43,7 @@ closeBtns.forEach((closeBtn) => {
 });
 
 function closeForms(e) {
-  e.preventDefault();
+  // e.preventDefault();
   loginForm.style.bottom = "-1000px";
   registerForm.style.bottom = "-1000px";
   setTimeout(() => {
